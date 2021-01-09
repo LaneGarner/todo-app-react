@@ -39,14 +39,6 @@ class App extends Component {
           <ol>{this.state.listOfTodos.map((todo, i) => {
             return <li key={i}>{todo}</li>
           })}</ol>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            >
-            Learn React
-          </a>
         </header>
       </div>
     );
