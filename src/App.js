@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import TodoCard from './TodoCard';
 import logo from './logo.svg';
 import './App.css';
 
@@ -26,6 +27,13 @@ class App extends Component {
     this.setState({listOfTodos: [...this.state.listOfTodos, this.state.inputValue]})
     this.setState({inputValue: ""})
   }
+
+  deleteItem = (i) => {
+    let copyOfList = this.state.listOfTodos
+    copyOfList.splice(i, 1)
+    this.setState({listOfTodos: [...copyOfList]})
+  }
+  
   
   render() {
     return (
@@ -37,8 +45,16 @@ class App extends Component {
             <button type="submit">Submit</button>
           </form>
           <ol>{this.state.listOfTodos.map((todo, i) => {
-            return <li key={i}>{todo}</li>
+            return <TodoCard key={i} index="i" title={todo} clickToRemove={this.deleteItem} />
           })}</ol>
+          <a 
+            className="App-link"
+            href="https://lanegarner.dev"
+            target="_blank"
+            rel="noreferrer"
+            >
+              {this.props.name}
+            </a>
         </header>
       </div>
     );

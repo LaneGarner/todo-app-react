@@ -1,3 +1,14 @@
+Before you get going make sure you install this most wonderful VS Code Extension: Simple React Snippets.
+Continue with the app you built in the first class of 411.
+Make a code plan through whiteboarding what you need to do.
+The todoList component should map over the this.state.todos and return a todoItem component for each todo in the array.
+The todoItem should be passed props that include handlers like: handleClick, handleChange, handleEdit.
+The todoItem should have a state that maintains the urgency status that takes in green, yellow or red.
+The todoItem component should render the text color based on the status of the item.
+At the end your Todo list should look the same but function differently with the exception of the status colors.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
